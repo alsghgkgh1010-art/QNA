@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교과목 질문 게시판</title>
+    <link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 초등학교 질문 게시판 🌟</h1>
+            <p>궁금한 교과목에 대해 질문하고 친구들과 답변을 나눠보세요! 💬</p>
+        </header>
+
+        <section class="question-form">
+            <h2>✏️ 새 질문 작성하기</h2>
+            <form id="questionForm">
+                <div class="form-group">
+                    <label for="subject">📖 교과목 선택:</label>
+                    <select id="subject" required>
+                        <option value="">교과목을 선택해주세요</option>
+                        <option value="국어">📝 국어</option>
+                        <option value="수학">🔢 수학</option>
+                        <option value="사회">🌍 사회</option>
+                        <option value="과학">🔬 과학</option>
+                        <option value="영어">🌐 영어</option>
+                        <option value="체육">⚽ 체육</option>
+                        <option value="음악">🎵 음악</option>
+                        <option value="미술">🎨 미술</option>
+                        <option value="도덕">💝 도덕</option>
+                        <option value="기타">📚 기타</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="title">💭 질문 제목:</label>
+                    <input type="text" id="title" placeholder="궁금한 내용의 제목을 적어주세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">📝 질문 내용:</label>
+                    <textarea id="content" rows="5" placeholder="궁금한 내용을 자세히 적어주세요" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="author">👤 작성자 이름:</label>
+                    <input type="text" id="author" placeholder="이름을 적어주세요" required>
+                </div>
+                <button type="submit">✨ 질문 올리기</button>
+            </form>
+        </section>
+
+        <section class="filter-section">
+            <h2>📋 질문 목록</h2>
+            <div class="filter-group">
+                <label for="filterSubject">🔍 교과목으로 찾기:</label>
+                <select id="filterSubject">
+                    <option value="">전체 보기</option>
+                    <option value="국어">📝 국어</option>
+                    <option value="수학">🔢 수학</option>
+                    <option value="사회">🌍 사회</option>
+                    <option value="과학">🔬 과학</option>
+                    <option value="영어">🌐 영어</option>
+                    <option value="체육">⚽ 체육</option>
+                    <option value="음악">🎵 음악</option>
+                    <option value="미술">🎨 미술</option>
+                    <option value="도덕">💝 도덕</option>
+                    <option value="기타">📚 기타</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="questions-list" id="questionsList">
+            <!-- 질문 목록이 여기에 동적으로 추가됩니다 -->
+        </section>
+    </div>
+
+    <script src="scipt.js"></script>
+</body>
+</html>
+
